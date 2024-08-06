@@ -114,7 +114,7 @@ ctx.imageSmoothingEnabled = true;
 ctx.setTransform(scale, 0, 0, scale, ctx.canvas.width * 0.5, ctx.canvas.height * 0.5);
 ctx.drawImage(img, img.width * -0.5, img.height * -0.5); // draw the image offset by half
 //ctx.drawImage(img,  x, y, img.width * scale, img.height * scale);
-ctx.drawImage(mask, 0, 0, c.width, c.height);
+ctx.drawImage(mask, 0, 0, canvas.width, canvas.height);
 });
   
 function dlPNG() {
