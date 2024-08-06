@@ -28,6 +28,7 @@ text-decoration: none;
 img, canvas {
 width: 100%;
 height: auto;
+background-color: #f0f0f2;
 }
 .box {
 position: relative;
@@ -63,7 +64,7 @@ width: auto;
 <img id="avatar" width="300" height="300" src="placeholder.png" />
 <img id="twibbon" width="300" height="300" src="overlay.png" />
 </p>
-<p><canvas id="cvs" width="300" height="300" style="border: 1px solid #d3d3d3;"></canvas></p>
+<p><canvas id="cvs" width="300" height="300"></canvas></p>
 <p><input accept="image/*" type='file' id="imgInp" /></p>
 <p><input accept="image/*" type='file' id="maskInp" /></p>
 <p><button class="Btn">CLICK HERE</button></p>
@@ -90,7 +91,7 @@ var c = document.getElementById("cvs");
 var ctx = c.getContext("2d");
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
-ctx.drawImage(img, 0, 1, c.width, c.height);
+ctx.drawImage(img, 0, 0, c.width, c.height);
 ctx.drawImage(mask, 0, 0, c.width, c.height);
 });
 </script>
