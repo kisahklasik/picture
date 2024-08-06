@@ -76,7 +76,7 @@ width: auto;
 <p class="">
 <img id="avatar" src="placeholder.png" loading="lazy"/>
 <img id="twibbon" src="overlay.png" loading="lazy"/>
-<canvas id="cvs" width="500" height="500"></canvas>
+<canvas id="cvs" width="300" height="300"></canvas>
 </p>
   
 <p><input accept="image/*" type='file' id="imgInp" /></p>
@@ -110,7 +110,7 @@ var ctx = c.getContext("2d");
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
 ctx.imageSmoothingEnabled = true;
-
+ctx.clearRect(0, 0, 300, 300);
 size = Math.min(img.height, img.width);
 x1 = 0;
 y1 = 0;
