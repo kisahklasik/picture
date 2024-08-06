@@ -25,10 +25,16 @@ a:link, a:visited {
 color: #38488f;
 text-decoration: none;
 }
-img, canvas {
-width: 100%;
-height: auto;
-background-color: #f0f0f2;
+img {
+display: block;
+margin: 10px auto;
+opacity: 0;
+transform: scale(1.2);
+transition: all 0.25s;
+}
+img.loaded {
+opacity: 1;
+transform: none;
 }
 .box {
 position: relative;
