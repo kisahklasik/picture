@@ -111,8 +111,10 @@ var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
 ctx.imageSmoothingEnabled = true;
 
-ctx.setTransform(scale, 0, 0, scale, ctx.canvas.width * 0.5, ctx.canvas.height * 0.5);
-ctx.drawImage(img, img.width * -0.5, img.height * -0.5);
+var x = (ctx.canvas.width - image.width * scale) * 0.5;
+var y = (ctx.canvas.height - image.height * scale) * 0.5;
+ctx.drawImage(img, x, y, image.width * scale, image.height * scale);
+
 //ctx.drawImage(img,  0, 0, canvas.width, canvas.height);
 ctx.drawImage(mask, 0, 0, canvas.width, canvas.height);
 });
