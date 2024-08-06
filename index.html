@@ -105,16 +105,15 @@ twibbon.src = URL.createObjectURL(file)
 let resEle = document.querySelector(".result");
 let BtnEle = document.querySelector(".Btn");
 BtnEle.addEventListener("click", () => {
-var c = document.getElementById("cvs");
+var canvas = document.getElementById("cvs");
 var ctx = c.getContext("2d");
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
 ctx.imageSmoothingEnabled = true;
 
-var x = (ctx.c.width - img.width * scale) * 0.5;
-var y = (ctx.c.height - img.height * scale) * 0.5;
-
-ctx.drawImage(img,  x, y, img.width * scale, img.height * scale);
+ctx.setTransform(scale, 0, 0, scale, ctx.canvas.width * 0.5, ctx.canvas.height * 0.5);
+ctx.drawImage(img, img.width * -0.5, img.height * -0.5); // draw the image offset by half
+//ctx.drawImage(img,  x, y, img.width * scale, img.height * scale);
 ctx.drawImage(mask, 0, 0, c.width, c.height);
 });
   
