@@ -109,7 +109,7 @@ var c = document.getElementById("cvs");
 var ctx = c.getContext("2d");
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
-ctx.imageSmoothingEnabled = false;
+ctx.imageSmoothingEnabled = true;
 ctx.drawImage(img, 0, 0, c.width, c.height);
 ctx.drawImage(mask, 0, 0, c.width, c.height);
 });
