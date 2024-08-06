@@ -40,7 +40,16 @@ width: auto;
 <p><img class="flower" width="300" height="300" src="placeholder.png" /></p>
 <p><canvas class="cvs" width="300" height="300" style="border: 1px solid #d3d3d3;"></canvas></p>
 <p></p><button class="Btn">CLICK HERE</button></p>
-
 </main>
+<script>
+let resEle = document.querySelector(".result");
+let BtnEle = document.querySelector(".Btn");
+BtnEle.addEventListener("click", () => {
+var c = document.querySelector(".cvs");
+var ctx = c.getContext("2d");
+var img = document.querySelector(".flower");
+ctx.drawImage(img, 10, 10);
+});
+</script>
 </body>
 </html>
