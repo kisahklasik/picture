@@ -108,7 +108,7 @@ ctx.drawImage(mask, 0, 0, c.width, c.height);
 });
 
 function dlPNG() {
-const canvas = document.querySelector('.result');
+const canvas = document.getElementById('cvs');
 canvas.toBlob((blob) => {
 const link = document.createElement("a");
 link.href = URL.createObjectURL(blob);
