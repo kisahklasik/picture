@@ -46,6 +46,13 @@ width: auto;
 <p></p><button class="Btn">CLICK HERE</button></p>
 </main>
 <script>
+imgInp.onchange = evt => {
+const [file] = imgInp.files
+if (file) {
+blah.src = URL.createObjectURL(file)
+}
+}
+  
 let resEle = document.querySelector(".result");
 let BtnEle = document.querySelector(".Btn");
 BtnEle.addEventListener("click", () => {
