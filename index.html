@@ -110,11 +110,11 @@ var ctx = c.getContext("2d");
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
 ctx.imageSmoothingEnabled = true;
-var dx = 50,dy = 50,
+var dx = 0,dy = 0,
 // destination width and height
 dw = 300,dh = 300;
-ctx.drawImage(img, 0, 0, c.width, c.height, dx, dy, dw, dh);
-ctx.drawImage(mask, 0, 0, c.width, c.height, dx, dy, dw, dh);
+ctx.drawImage(img, dx, dy, dw, dh, 0, 0, c.width, c.height);
+ctx.drawImage(mask, 0, 0, c.width, c.height);
 });
   
 function dlPNG() {
