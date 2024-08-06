@@ -70,7 +70,14 @@ width: auto;
 imgInp.onchange = evt => {
 const [file] = imgInp.files
 if (file) {
-preview.src = URL.createObjectURL(file)
+avatar.src = URL.createObjectURL(file)
+}
+}
+
+maskInp.onchange = evt => {
+const [file] = imgInp.files
+if (file) {
+twibbon.src = URL.createObjectURL(file)
 }
 }
   
@@ -79,7 +86,8 @@ let BtnEle = document.querySelector(".Btn");
 BtnEle.addEventListener("click", () => {
 var c = document.querySelector(".cvs");
 var ctx = c.getContext("2d");
-var img = document.getElementById("preview");
+var img = document.getElementById("avatar");
+var mask = document.getElementById("twibbon");
 ctx.drawImage(img, 10, 10);
 });
 </script>
