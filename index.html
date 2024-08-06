@@ -76,7 +76,10 @@ width: auto;
 <p><canvas id="cvs" width="300" height="300"></canvas></p>
 <p><input accept="image/*" type='file' id="imgInp" /></p>
 <p><input accept="image/*" type='file' id="maskInp" /></p>
-<p><button class="Btn">CLICK HERE</button></p>
+<p>
+<button class="Btn">CLICK HERE</button>
+<button onclick="dlPNG()">SAVE PNG</button>
+</p>
 </main>
 <script>
 imgInp.onchange = evt => {
@@ -104,6 +107,16 @@ ctx.drawImage(img, 0, 0, c.width, c.height);
 ctx.drawImage(mask, 0, 0, c.width, c.height);
 });
 
+function dlPNG() {
+const canvas = document.querySelector('.result');
+canvas.toBlob((blob) => {
+const link = document.createElement("a");
+link.href = URL.createObjectURL(blob);
+link.download = "image.png";
+link.click();
+})
+};
+  
 const images = document.querySelectorAll('img');
 for(let img of images) {
 img.onload = ({target}) => setTimeout(() => {target.classList.add('loaded')}, 200)
