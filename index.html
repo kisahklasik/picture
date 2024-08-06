@@ -29,6 +29,24 @@ img, canvas {
 width: 100%;
 height: auto;
 }
+.box {
+position: relative;
+overflow:hidden;
+width:300px;
+height:300px;
+}
+.box img  {
+position: absolute;
+top:50%;
+left:50%;
+-webkit-transform:translate(-50%,-50%);
+-ms-transform:translate(-50%,-50%);
+transform:translate(-50%,-50%);
+width:300px;
+height:300px;
+-o-object-fit:cover;
+object-fit:cover;
+}
 @media (max-width: 700px) {
 main {
 margin: 0 auto;
@@ -41,8 +59,10 @@ width: auto;
 <body>
 <main>
 <h1>Example Domain</h1>
-<p><img id="preview" width="300" height="300" src="placeholder.png" /></p>
-<p><canvas class="cvs" width="300" height="300" style="border: 1px solid #d3d3d3;"></canvas></p>
+<p class="box">
+<img id="preview" width="300" height="300" src="placeholder.png" />
+<canvas class="cvs" width="300" height="300" style="border: 1px solid #d3d3d3;"></canvas>
+</p>
 <p><input accept="image/*" type='file' id="imgInp" /></p>
 <p></p><button class="Btn">CLICK HERE</button></p>
 </main>
