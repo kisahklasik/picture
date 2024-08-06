@@ -60,11 +60,13 @@ width: auto;
 <main>
 <h1>Example Domain</h1>
 <p class="box">
-<img id="preview" width="300" height="300" src="placeholder.png" />
-<canvas class="cvs" width="300" height="300" style="border: 1px solid #d3d3d3;"></canvas>
+<img id="avatar" width="300" height="300" src="placeholder.png" />
+<img id="twibbon" width="300" height="300" src="overlay.png" />
 </p>
+<p><canvas class="cvs" width="300" height="300" style="border: 1px solid #d3d3d3;"></canvas></p>
 <p><input accept="image/*" type='file' id="imgInp" /></p>
-<p></p><button class="Btn">CLICK HERE</button></p>
+<p><input accept="image/*" type='file' id="maskInp" /></p>
+<p><button class="Btn">CLICK HERE</button></p>
 </main>
 <script>
 imgInp.onchange = evt => {
