@@ -107,6 +107,7 @@ let BtnEle = document.querySelector(".Btn");
 BtnEle.addEventListener("click", () => {
 var canvas = document.getElementById("cvs");
 var ctx = canvas.getContext("2d");
+context.clearRect(0, 0, canvas.width, canvas.height);
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
   
