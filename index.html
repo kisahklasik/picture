@@ -109,7 +109,6 @@ var canvas = document.getElementById("cvs");
 var ctx = canvas.getContext("2d");
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
-ctx.imageSmoothingEnabled = true;
   
 ctx.drawImage(img,  0, 0, canvas.width, canvas.height);
 ctx.drawImage(mask, 0, 0, canvas.width, canvas.height);
