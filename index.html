@@ -87,11 +87,11 @@ width: auto;
 <p><span id="status"></span></p> 
 <p>
 <!--<input accept="image/*" type='file' id="imgInp" /> -->
-<button onclick="selectFile()">Pilih Foto</button>
+<button onclick="selectFile(img)">Pilih Foto</button>
 </p>
 <p>
 <!--<input accept="image/*" type='file' id="maskInp" /> -->
-<button onclick="selectFile()">Pilih Frame</button>
+<button onclick="selectFile(mask)">Pilih Frame</button>
 </p>
 
 <p>
@@ -116,8 +116,10 @@ twibbon.src = URL.createObjectURL(file)
 
 function selectFile() {
 document.getElementById("imgInp").click();
-document.getElementById("maskInp").click();
 }
+function selectFile() {
+document.getElementById("maskInp").click();
+}  
   
 let status = document.getElementById("status");
 let btn = document.getElementById("gen");
