@@ -76,8 +76,8 @@ width: auto;
 <p class="box">
 <img id="avatar" src="placeholder.png" loading="lazy"/>
 <img id="twibbon" src="overlay.png" loading="lazy"/>
+<canvas id="cvs"></canvas>
 </p>
-<p><canvas id="cvs"></canvas></p>
   
 <p><input accept="image/*" type='file' id="imgInp" /></p>
 <p><input accept="image/*" type='file' id="maskInp" /></p>
@@ -110,8 +110,8 @@ var ctx = canvas.getContext("2d");
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
 
-canvas.width = 500;
-canvas.height = 500;
+canvas.width = 1024;
+canvas.height = 1024;
 
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 ctx.drawImage(img,  0, 0, canvas.width / 1, canvas.height / 1);
