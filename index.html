@@ -76,7 +76,7 @@ width: auto;
 <img id="twibbon" src="overlay.png" loading="lazy"/>
 <canvas id="cvs"></canvas>
 </p>
-<p><span class="Btn"></span></p> 
+<p><span class="status"></span></p> 
 <p><input accept="image/*" type='file' id="imgInp" /></p>
 <p><input accept="image/*" type='file' id="maskInp" /></p>
 
@@ -100,7 +100,7 @@ twibbon.src = URL.createObjectURL(file)
 }
 }
   
-//let resEle = document.querySelector(".result");
+let status = document.querySelector(".status");
 let BtnEle = document.querySelector(".Btn");
 BtnEle.addEventListener("click", () => {
 var canvas = document.getElementById("cvs");
@@ -108,7 +108,7 @@ var ctx = canvas.getContext("2d");
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
 
-BtnEle.innerText = 'Done!';
+status.innerText = 'Done!';
 canvas.width = canvas.height = 1024;
 
 ctx.clearRect(0, 0, canvas.width, canvas.height);
