@@ -52,6 +52,38 @@ aspect-ratio: 1/1;
 -o-object-fit:cover;
 object-fit:cover;
 }
+label {
+display: block;
+}
+input, button, select, textarea {
+font-family: inherit;
+font-size: inherit;
+padding: 0.4em;
+margin: 0 0 0.5em 0;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 2px;
+}
+input:disabled {
+color: #ccc;
+}
+input[type="range"] {
+height: 0;
+}
+button {
+color: #333;
+background-color: #f4f4f4;
+outline: none;
+}
+button:disabled {
+color: #999;
+}
+button:not(:disabled):active {
+background-color: #ddd;
+}
+button:focus {
+border-color: #666;
+}
 @media (max-width: 700px) {
 main {
 margin: 0 auto;
@@ -71,8 +103,8 @@ width: auto;
 </p>
   
 <p><span id="status"></span></p> 
-<p>Avatar: <input accept="image/*" type='file' id="imgInp" oninput="checkInput()" /></p>
-<p>Frame: <input accept="image/*" type='file' id="maskInp" oninput="checkInput()" /></p>
+<p><label>Avatar:</label> <input accept="image/*" type='file' id="imgInp" oninput="checkInput()" /></p>
+<p><label>Frame:</label> <input accept="image/*" type='file' id="maskInp" oninput="checkInput()" /></p>
 
 <p>
 <button id="gen" disabled>CLICK HERE</button>
