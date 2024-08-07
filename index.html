@@ -113,13 +113,6 @@ if (file) {
 twibbon.src = URL.createObjectURL(file)
 }
 }
-
-function selectFile() {
-document.getElementById("imgInp").click();
-}
-function selectFile() {
-document.getElementById("maskInp").click();
-}  
   
 let status = document.getElementById("status");
 let btn = document.getElementById("gen");
@@ -152,6 +145,13 @@ const images = document.querySelectorAll('img');
 for(let img of images) {
 img.onload = ({target}) => setTimeout(() => {target.classList.add('loaded')}, 200)
 }
+
+function selectFile(img) {
+document.getElementById("imgInp").click();
+}
+function selectFile(mask) {
+document.getElementById("maskInp").click();
+}  
 </script>
 </body>
 </html>
