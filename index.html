@@ -76,7 +76,7 @@ width: auto;
 
 <p>
 <button id="gen" disabled>CLICK HERE</button>
-<button onclick="dlPNG()">SAVE PNG</button>
+<button id="save" onclick="dlPNG()" disabled>SAVE PNG</button>
 </p>
 </main>
 <script>
@@ -126,7 +126,9 @@ function checkInput() {
 var input = document.getElementById('imgInp').value;
 var input = document.getElementById('maskInp').value;
 var button = document.getElementById('gen');
+var dl = document.getElementById('save');
 button.disabled = input === '';
+dl.disabled = input === '';
 }
 </script>
 </body>
