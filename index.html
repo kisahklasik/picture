@@ -75,7 +75,7 @@ width: auto;
 <p>Frame: <input accept="image/*" type='file' id="maskInp" /></p>
 
 <p>
-<button id="gen">CLICK HERE</button>
+<button id="gen" disabled>CLICK HERE</button>
 <button onclick="dlPNG()">SAVE PNG</button>
 </p>
 </main>
@@ -120,6 +120,15 @@ link.download = "image.png";
 link.click();
 })
 };
+</script>
+<script>
+$("input[type='file']").keyup(function(){
+if($("#imgInp").val() !== ""){
+$("#gen").attr("disabled", false);
+}else{
+$("#gen").attr("disabled", true);
+}
+});
 </script>
 </body>
 </html>
