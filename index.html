@@ -40,12 +40,6 @@ transform: none;
 canvas {
 width: 100%;
 }
-input[type="file"] {
-display: none;
-}
-button[onclick*="()"] {
-cursor: pointer;
-}
 .box {
 background-color: #f0f0f2;
 position: relative;
@@ -86,12 +80,10 @@ width: auto;
 </p>
 <p><span id="status"></span></p> 
 <p>
-<!--<input accept="image/*" type='file' id="imgInp" /> -->
-<button onclick="selectFile(img)">Pilih Foto</button>
+<input accept="image/*" type='file' id="imgInp" />
 </p>
 <p>
-<!--<input accept="image/*" type='file' id="maskInp" /> -->
-<button onclick="selectFile(mask)">Pilih Frame</button>
+<input accept="image/*" type='file' id="maskInp" />
 </p>
 
 <p>
@@ -145,13 +137,6 @@ const images = document.querySelectorAll('img');
 for(let img of images) {
 img.onload = ({target}) => setTimeout(() => {target.classList.add('loaded')}, 200)
 }
-
-function selectFile(img) {
-document.getElementById("imgInp").click();
-}
-function selectFile(mask) {
-document.getElementById("maskInp").click();
-}  
 </script>
 </body>
 </html>
