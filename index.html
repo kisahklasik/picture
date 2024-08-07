@@ -107,6 +107,11 @@ if (file) {
 twibbon.src = URL.createObjectURL(file)
 }
 }
+
+function selectFile() {
+document.getElementById("imgInp").click();
+document.getElementById("maskInp").click();
+}
   
 let status = document.getElementById("status");
 let btn = document.getElementById("gen");
