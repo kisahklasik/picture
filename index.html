@@ -39,8 +39,8 @@ transform: none;
 }
 canvas {
 background-color: #f0f0f2;
-width: 300px;
-height: 300px;
+width: 100%;
+/*height: 300px;*/
 }
 
 .box {
@@ -77,7 +77,7 @@ width: auto;
 <img id="avatar" src="placeholder.png" loading="lazy"/>
 <img id="twibbon" src="overlay.png" loading="lazy"/>
 </p>
-<p><canvas id="cvs" width="300" height="300"></canvas></p>
+<p><canvas id="cvs"></canvas></p>
   
 <p><input accept="image/*" type='file' id="imgInp" /></p>
 <p><input accept="image/*" type='file' id="maskInp" /></p>
@@ -107,10 +107,13 @@ let BtnEle = document.querySelector(".Btn");
 BtnEle.addEventListener("click", () => {
 var canvas = document.getElementById("cvs");
 var ctx = canvas.getContext("2d");
-//context.clearRect(0, 0, canvas.width, canvas.height);
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
-  
+
+canvas.width = 500;
+canvas.height = 500;
+
+ctx.clearRect(0, 0, canvas.width, canvas.height);
 ctx.drawImage(img,  0, 0, canvas.width / 1, canvas.height / 1);
 ctx.drawImage(mask, 0, 0, canvas.width, canvas.height);
 ctx.imageSmoothingEnabled = true;
@@ -129,13 +132,6 @@ link.click();
 const images = document.querySelectorAll('img');
 for(let img of images) {
 img.onload = ({target}) => setTimeout(() => {target.classList.add('loaded')}, 200)
-}
-
-var timeOut;
-window.onresize = function(){
-if(timeOut)
-clearTimeout(timeOut);
-timeOut = setTimeout(BtnEle, 10);
 }
 </script>
 </body>
