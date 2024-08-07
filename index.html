@@ -72,7 +72,7 @@ width: auto;
   
 <p><span id="status"></span></p> 
 <p>Avatar: <input accept="image/*" type='file' id="imgInp" oninput="checkInput()" /></p>
-<p>Frame: <input accept="image/*" type='file' id="maskInp" /></p>
+<p>Frame: <input accept="image/*" type='file' id="maskInp" oninput="checkInput()" /></p>
 
 <p>
 <button id="gen" disabled>CLICK HERE</button>
@@ -124,6 +124,7 @@ link.click();
 <script>
 function checkInput() {
 var input = document.getElementById('imgInp').value;
+var input = document.getElementById('maskInp').value;
 var button = document.getElementById('gen');
 button.disabled = input === '';
 }
