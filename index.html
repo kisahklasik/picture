@@ -124,5 +124,13 @@ link.click();
 })
 };
 </script>
+<script>
+var img = document.querySelector('img')
+function loaded() {
+alert('loaded')
+} if (img.complete) {
+img.classList.remove("loading");
+}
+</script>
 </body>
 </html>
