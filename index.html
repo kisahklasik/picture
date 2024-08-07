@@ -28,14 +28,6 @@ text-decoration: none;
 img {
 width: 100%;
 height: auto;
-display: block;
-opacity: 0;
-transform: scale(1.2);
-transition: all 0.25s;
-}
-img.loaded {
-opacity: 1;
-transform: none;
 }
 canvas {
 width: 100%;
@@ -76,8 +68,8 @@ width: auto;
 <main>
 <h1>Example Domain</h1>
 <p class="box">
-<img id="avatar" src="placeholder.png" loading="lazy"/>
-<img id="twibbon" src="overlay.png" loading="lazy"/>
+<img id="avatar" src="placeholder.png"/>
+<img id="twibbon" src="overlay.png"/>
 <canvas id="cvs"></canvas>
 </p>
   
@@ -131,11 +123,6 @@ link.download = "image.png";
 link.click();
 })
 };
-  
-const images = document.querySelectorAll('img');
-for(let img of images) {
-img.onload = ({target}) => setTimeout(() => {target.classList.add('loaded')}, 200)
-}
 </script>
 </body>
 </html>
