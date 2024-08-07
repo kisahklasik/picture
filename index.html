@@ -106,10 +106,10 @@ twibbon.src = URL.createObjectURL(file)
 let status = document.querySelector(".status");
 let BtnEle = document.querySelector(".Btn");
 BtnEle.addEventListener("click", () => {
-var canvas = document.getElementById("cvs");
-var ctx = canvas.getContext("2d");
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
+var canvas = document.getElementById("cvs");
+var ctx = canvas.getContext("2d");
 
 status.innerText = 'Done!';
 canvas.width = canvas.height = 1024;
