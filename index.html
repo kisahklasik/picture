@@ -168,9 +168,10 @@ save.disabled = mask === '';
 }
 </script>
 <script>
+var canvas = document.getElementById("cvs");
 document.getElementById("shared").addEventListener("click", () => {
 alert("share image");
-const canvas = canvas.toDataURL(); 
+const dataUrl = canvas.toDataURL(); 
 fetch(dataUrl)
 .then(res => res.blob())
 .then(blob => {
