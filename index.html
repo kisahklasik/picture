@@ -163,5 +163,15 @@ button.disabled = input === '';
 save.disabled = input === '';
 }
 </script>
+<script>
+const btn = document.getElementById("gen");
+const dl = document.getElementById("dl");
+setTimeout(() => {
+btn.disabled = true;
+btn.textContent = "Muat ulang!";
+dl.disabled = true;
+dl.textContent = "Terunduh!";
+}, 5000);
+</script>
 </body>
 </html>
