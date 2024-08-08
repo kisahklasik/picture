@@ -107,7 +107,7 @@ width: auto;
 <p><label>Frame:</label> <input accept="image/*" type='file' id="maskInp" oninput="checkInput()" /></p>
 
 <p>
-<button id="gen" disabled>Download</button>
+<button id="dl" disabled>Download</button>
 <!--<button id="dl" onclick="dlPNG()" disabled>SAVE PNG</button>-->
 </p>
 </main>
@@ -127,9 +127,9 @@ twibbon.src = URL.createObjectURL(file)
 }
   
 let status = document.getElementById("status");
-let btn = document.getElementById("gen");
+//let btn = document.getElementById("gen");
 let save = document.getElementById("dl");
-btn.addEventListener("click", () => {
+save.addEventListener("click", () => {
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
 var canvas = document.getElementById("cvs");
@@ -139,8 +139,8 @@ status.innerText = 'Done!';
 canvas.width = canvas.height = 1024;
 
 setTimeout(() => {
-btn.disabled = true;
-btn.textContent = "Success!";
+save.disabled = true;
+save.textContent = "Success!";
 }, 5000);
   
 ctx.clearRect(0, 0, canvas.width, canvas.height);
