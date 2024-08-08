@@ -137,6 +137,11 @@ var ctx = canvas.getContext("2d");
 status.innerText = 'Done!';
 canvas.width = canvas.height = 1024;
 
+setTimeout(() => {
+btn.disabled = true;
+btn.textContent = "Muat ulang!";
+}, 5000);
+  
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 ctx.drawImage(img,  0, 0, canvas.width / 1, canvas.height / 1);
 ctx.drawImage(mask, 0, 0, canvas.width, canvas.height);
@@ -165,15 +170,6 @@ save.disabled = input === '';
 }
 </script>
 -->
-<script>
-const btn = document.getElementById("gen");
-//const dl = document.getElementById("dl");
-setTimeout(() => {
-btn.disabled = true;
-btn.textContent = "Muat ulang!";
-//dl.disabled = true;
-//dl.textContent = "Terunduh!";
-}, 5000);
-</script>
+
 </body>
 </html>
