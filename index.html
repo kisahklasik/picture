@@ -107,8 +107,8 @@ width: auto;
 <p><label>Frame:</label> <input accept="image/*" type='file' id="maskInp" oninput="checkInput()" /></p>
 
 <p>
-<button id="gen">CLICK HERE</button>
-<button id="dl" onclick="dlPNG()">SAVE PNG</button>
+<button id="gen" disabled>CLICK HERE</button>
+<button id="dl" onclick="dlPNG()" disabled>SAVE PNG</button>
 </p>
 </main>
 <script>
@@ -158,7 +158,7 @@ link.click();
 })
 };
 </script>
-<!--
+
 <script>
 function checkInput() {
 var input = document.getElementById('imgInp').value;
@@ -169,7 +169,5 @@ button.disabled = input === '';
 save.disabled = input === '';
 }
 </script>
--->
-
 </body>
 </html>
