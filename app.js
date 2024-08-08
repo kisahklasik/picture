@@ -30,7 +30,7 @@ save.disabled = true;
 save.textContent = "Success!";
 }, 3000);
   
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.clearRect(0, 0, canvas.width / 2, canvas.height / 2);
 ctx.drawImage(img,  0, 0, canvas.width / 1, canvas.height / 1);
 ctx.drawImage(mask, 0, 0, canvas.width, canvas.height);
 ctx.imageSmoothingEnabled = true;
