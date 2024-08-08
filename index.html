@@ -170,7 +170,7 @@ save.disabled = mask === '';
 <script>
 document.getElementById("shared").addEventListener("click", () => {
 alert("share image");
-const dataUrl = canvas.toDataURL(); 
+const canvas = canvas.toDataURL(); 
 fetch(dataUrl)
 .then(res => res.blob())
 .then(blob => {
