@@ -13,6 +13,7 @@ twibbon.src = URL.createObjectURL(file)
 }
   
 let status = document.getElementById("status");
+let social = document.getElementById("share");
 let save = document.getElementById("dl");
 
 save.addEventListener("click", () => {
@@ -42,7 +43,7 @@ createEl.download = "image";
 createEl.click();
 createEl.remove();
 
-document.getElementById("share").innerHTML =
-<button id="shared">Share</button>';
+social.innerHTML =
+'<button id="shared">Share</button>';
 
 });
