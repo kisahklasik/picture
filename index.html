@@ -127,9 +127,10 @@ twibbon.src = URL.createObjectURL(file)
 }
   
 let status = document.getElementById("status");
-//let btn = document.getElementById("gen");
 let save = document.getElementById("dl");
+
 save.addEventListener("click", () => {
+
 var img = document.getElementById("avatar");
 var mask = document.getElementById("twibbon");
 var canvas = document.getElementById("cvs");
@@ -155,26 +156,14 @@ createEl.download = "image";
 createEl.click();
 createEl.remove();
 });
-
-//function dlPNG() {
-//const canvas = document.getElementById('cvs');
-//canvas.toBlob((blob) => {
-//const link = document.createElement("a");
-//link.href = URL.createObjectURL(blob);
-//link.download = "image.png";
-//link.click();
-//})
-//};
 </script>
 
 <script>
 function checkInput() {
-var input = document.getElementById('imgInp').value;
-var input = document.getElementById('maskInp').value;
-//var button = document.getElementById('gen');
+var img = document.getElementById('imgInp').value;
+var mask = document.getElementById('maskInp').value;
 var save = document.getElementById('dl');
 save.disabled = input === '';
-//save.disabled = input === '';
 }
 </script>
 </body>
