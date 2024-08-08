@@ -41,4 +41,8 @@ createEl.href = canvasUrl;
 createEl.download = "image";
 createEl.click();
 createEl.remove();
+
+document.getElementById("shared").innerHTML =
+<button id="shared">Share</button>';
+
 });
