@@ -42,7 +42,7 @@ createEl.download = "image";
 createEl.click();
 createEl.remove();
 
-document.getElementById("shared").innerHTML =
+document.getElementById("share").innerHTML =
 <button id="shared">Share</button>';
 
 });
